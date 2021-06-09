@@ -24,6 +24,8 @@ public class Cuadrado implements Figura{
     }
 
     public double getArea() {
+        if(lado == 0)
+            throw new LadoNoProvistoException();
         return lado * lado;
     }
 

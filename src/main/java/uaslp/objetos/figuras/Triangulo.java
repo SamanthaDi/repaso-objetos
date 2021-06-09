@@ -33,6 +33,10 @@ public class Triangulo implements Figura{
     }
 
     public double getArea() {
+        if(base == 0)
+            throw new BaseNoProvistaException();
+        else if (altura == 0)
+            throw new AlturaNoProvistaException();
         return base * altura / 2;
     }
 
