@@ -1,8 +1,10 @@
 package uaslp.objetos.figuras;
 
-public class Cuadrado{
+public class Cuadrado implements Figura{
 
     private double lado;
+    private String name = "Cuadrado";
+
 
     public Cuadrado(double lado) {
         this.lado = lado;
@@ -10,6 +12,11 @@ public class Cuadrado{
 
     public Cuadrado() {
 
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     public void setLado(double lado) {
